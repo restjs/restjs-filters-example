@@ -22,7 +22,7 @@ export default class TranslationFilter{
 
     catch(message, statusCode : number) : ErrorMessageInterface{
         if(typeof message == 'string'){
-            message = <h6>{this.translate(message)}</h6>;
+            message = <h2 style={{color:"red"}}>{this.translate(message)}</h2>;
         }else if(Array.isArray(message)){
             message = message.map(m=>this.translate(m));
         }
